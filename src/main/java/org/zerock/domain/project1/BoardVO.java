@@ -1,7 +1,6 @@
 package org.zerock.domain.project1;
 
 import java.time.LocalDateTime;
-import java.time.ZoneId;
 
 import lombok.Data;
 
