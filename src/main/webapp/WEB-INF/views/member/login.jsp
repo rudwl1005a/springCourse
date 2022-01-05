@@ -24,11 +24,11 @@
 			<form method="post">
 				<div class="form-group">
 					<label for="input1">아이디</label>
-					<input type="text" class="form-control" name="id" required="" />
+					<input type="text" class="form-control" name="id" required/>
 				</div>
 				<div class="form-group">
 					<label for="input2">패스워드</label>
-					<input type="text" class="form-control" name="password" required="" />
+					<input type="text" class="form-control" name="password" required />
 				</div>
 				<button class="btn btn-outline-primary">로그인</button>
 			</form>

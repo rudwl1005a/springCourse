@@ -38,8 +38,12 @@
 					<input type="text" class="form-control" id="input2" required name="password" value="${member.password }" />
 				</div>
 				<div class="form-group">
+					<label for="input5">닉네임</label>
+					<input type="text" class="form-control" id="input5" required name="nickName" value="${member.nickName }" />
+				</div>
+				<div class="form-group">
 					<label for="input3">이메일</label>
-					<input type="text" class="form-control" id="input3" required name="email" value="${member.email }" />
+					<input type="email" class="form-control" id="input3" required name="email" value="${member.email }" />
 				</div>
 					<div class="form-group">
 					<label for="input4">주소</label>
