@@ -24,9 +24,17 @@ public class BoardController {
 	private BoardService service;
 	
 	@GetMapping("/list")
-	public void list(Model model) {
+	public void list(@RequestParam(value="page", defaultValue = "1") Integer page, Model model) {
+
+		// defaultValue = "1"
+		/* if (page == null) {page = 1;} */
+		
+		Integer numberPerPage = 10; // 한 페이지의 레코드 수
+		
 		// 3. business logic
-		List<BoardVO> list = service.getList();
+//		List<BoardVO> list = service.getList();
+		List<BoardVO> list = service.getListPage(page, numberPerPage);		
+		
 		
 		// 4. add attribute
 		model.addAttribute("list", list);

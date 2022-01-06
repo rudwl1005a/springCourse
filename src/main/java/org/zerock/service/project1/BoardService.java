@@ -34,5 +34,13 @@ public class BoardService {
 	public List<BoardVO> getList(){
 		return mapper.getList();
 	}
-	
+
+	public List<BoardVO> getListPage(Integer page, Integer numberPerPage) {	
+		
+		// sql에서 사용할 record 시작 번호
+		Integer from = (page - 1) * 10;
+		
+		return mapper.getListPage(from, numberPerPage);
+	}
+
 }

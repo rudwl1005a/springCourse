@@ -39,10 +39,10 @@
 							<tr>
 								<td>${board.id }</td>
 								<td>
-									<a href="get?id=${board.id }">${board.title }</a>
+									<a href="get?id=${board.id }"><c:out value="${board.title }"/></a>
 								</td>
-								<td>${board.nickName }</td>
-								<td>${board.inserted }</td>
+								<td><c:out value="${board.nickName }"/></td>
+								<td>${board.customInserted }</td>
 							</tr>
 						</c:forEach>
 					</tbody>
@@ -50,6 +50,28 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- pagination -->
+	<nav aria-label="Page navigation example">
+	  <ul class="pagination justify-content-center">
+	    <li class="page-item">
+	      <a class="page-link" href="#" aria-label="Previous">
+	        <span aria-hidden="true">&laquo;</span>
+	      </a>
+	    </li>
+	    <c:forEach begin="1" end="10" var="pageNumber">
+	    	<c:url value="/board/list" var="pageLink">
+	    		<c:param name="page" value="${pageNumber }"/>
+	    	</c:url>
+		    <li class="page-item"><a class="page-link" href="${pageLink }">${pageNumber }</a></li>
+	    </c:forEach>
+	    <li class="page-item">
+	      <a class="page-link" href="#" aria-label="Next">
+	        <span aria-hidden="true">&raquo;</span>
+	      </a>
+	    </li>
+	  </ul>
+	</nav>
 
 	<!-- modal -->
 	<c:if test="${not empty result }">

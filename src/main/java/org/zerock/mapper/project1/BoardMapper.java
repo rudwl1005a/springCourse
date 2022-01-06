@@ -22,6 +22,9 @@ public interface BoardMapper {
 	// 하나의 게시물 수정
 	public int update(BoardVO board);
 
+	// 페이지 네이션 게시물 조회
+	public List<BoardVO> getListPage(@Param("from") Integer from, @Param("items") Integer numberPerPage);
+
 }
 
 
