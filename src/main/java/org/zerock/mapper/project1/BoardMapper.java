@@ -25,6 +25,8 @@ public interface BoardMapper {
 	// 페이지 네이션 게시물 조회
 	public List<BoardVO> getListPage(@Param("from") Integer from, @Param("items") Integer numberPerPage);
 
+	public Integer getCountRows();
+
 }
 
 
