@@ -68,5 +68,12 @@
 	<select id="getCountRows" resultType="int">
 	SELECT COUNT(*) FROM Member
 	</select>
+	
+	<select id="selectByNickName" resultType="org.zerock.domain.project1.MemberVO">
+	SELECT id, password, email, address, inserted, nickName
+	FROM Member
+	WHERE nickName = #{nickName}
+	</select>
+	
  
  </mapper>

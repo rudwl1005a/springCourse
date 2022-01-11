@@ -73,4 +73,19 @@ public class MemberService {
 
 		return pageInfo;
 	}
+	
+	/* 아이디 체크 */
+	public boolean hasId(String id) {
+
+		MemberVO member =  mapper.select(id);
+
+		return member != null;
+	}
+	
+	/* 닉네임 체크 */
+	public boolean hasNickName(String nickName) {
+		MemberVO member = mapper.selectByNickName(nickName);
+
+		return member != null;
+	}
 }
