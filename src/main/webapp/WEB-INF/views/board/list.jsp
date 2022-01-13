@@ -17,7 +17,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<b:navBar></b:navBar>
+	<b:navBar active="list"></b:navBar>
 
 	<div class="container">
 		<div class="row">

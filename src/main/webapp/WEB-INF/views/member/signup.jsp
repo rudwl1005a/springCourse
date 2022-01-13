@@ -18,7 +18,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<b:navBar></b:navBar>
+<b:navBar active="signup"></b:navBar>
 
 <div class="container">
 	<div class="row">
