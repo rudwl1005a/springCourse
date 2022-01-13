@@ -61,7 +61,7 @@
 	</delete>
 	
 	<!-- pagination -->
-		<select id="getListPage" resultType="org.zerock.domain.project1.BoardVO">
+	<select id="getListPage" resultType="org.zerock.domain.project1.BoardVO">
 	SELECT 
 	    b.id,
 	    b.title,
