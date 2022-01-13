@@ -69,18 +69,26 @@
 	    b.writer,
 	    b.inserted,
 	    b.updated,
-	    m.nickName
+	    m.nickName,
+	    COUNT(r.id) replyCount
 	FROM
 	    Board b
 	        JOIN
 	    Member m ON b.writer = m.id
-	ORDER BY id DESC
-	LIMIT #{from}, #{items};
+	    	LEFT JOIN
+	    Reply r ON b.id = r.boardId
+	GROUP BY b.id
+	ORDER BY b.id DESC
+	LIMIT #{from}, #{items}
 	</select>
 	
 	<select id="getCountRows" resultType="int">
 	SELECT COUNT(*) FROM Board
 	</select>
+	
+	<delete id="deleteByMemberId">
+	DELETE FROM Board WHERE writer = #{memberId}
+	</delete>
 </mapper>
 
 

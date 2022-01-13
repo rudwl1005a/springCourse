@@ -10,4 +10,14 @@ public interface ReplyMapper {
 
 	public int insert(ReplyVO reply);
 
+	public ReplyVO selectById(Integer id);
+
+	public int update(ReplyVO newReply);
+	
+	public int delete(Integer id);
+
+	public int deleteByBoardId(Integer boardId);
+	
+	public int deleteByMemberId(String memberId);
+
 }

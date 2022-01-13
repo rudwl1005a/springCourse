@@ -15,6 +15,8 @@ public class ReplyVO {
 	private LocalDateTime inserted;
 	private LocalDateTime updated;
 
+	private Boolean own;
+
 	private String nickName;
 
 	public String getCustomInserted() {
