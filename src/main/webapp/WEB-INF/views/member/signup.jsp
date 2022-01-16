@@ -129,28 +129,26 @@ $(document).ready(
                   success : function(data) {
                     switch (data) {
                     case "able":
-                      // 사용가능할 때
-                      $("#idCheckMessage").text("사용 가능한 아이디 입니다.")
-                          .removeClass("text-danger text-warning").addClass(
-                              "text-primary");
+						// 사용가능할 때
+						$("#idCheckMessage").text("사용 가능한 아이디 입니다.")
+							.removeClass("text-danger text-warning").addClass(
+							"text-primary");
                       
-                      $("#input1").attr("readonly", true);
+						$("#input1").attr("readonly", true);
 
-                      // 서브밋 버튼 활성화 조건 추가
-                      idAble = true;
-                      break;
+						// 서브밋 버튼 활성화 조건 추가
+						idAble = true;
+						break;
                     case "unable":
-                      // 사용불가능할 때
-                      $("#idCheckMessage").text("이미 있는 아이디 입니다.")
-                          .removeClass("text-warning text-primary").addClass(
-                              "text-danger");
-
-                      // 서브밋 버튼 비활성화 조건 추가
-                      idAble = false;
-                      break;
-
+						// 사용불가능할 때
+						$("#idCheckMessage").text("이미 있는 아이디 입니다.")
+							.removeClass("text-warning text-primary").addClass(
+							"text-danger");
+                     	// 서브밋 버튼 비활성화 조건 추가
+                     	idAble = false;
+                     	break;
                     default:
-                      break;
+                    	break;
                     }
                   },
                   complete : function() {

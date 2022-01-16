@@ -33,7 +33,7 @@ public class MemberController {
 	public String idcheck(String id) {
 
 		boolean has = service.hasId(id);
-
+		
 		if (has) {
 			return "unable";
 		} else {
